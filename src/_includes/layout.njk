@@ -7,9 +7,8 @@
 </head>
 
 <body>
-    {{ content | safe }}
-
-    <script type="module" src="{{ 'assets/app.js' }}"></script>
+{{ content | safe }}
 </body>
 
+<script src="{{ '/assets/app.js' }}" type="module"></script>
 </html>

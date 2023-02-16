@@ -2,9 +2,9 @@
   "name": "eleventy-vite-minimal",
   "author": "Thomas Breitner",
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.0-beta.1",
-    "@11ty/eleventy-plugin-vite": "^2.0.0-canary.2",
+    "@11ty/eleventy": "^2.0.0",
+    "@11ty/eleventy-plugin-vite": "^4.0.0",
     "npm": "^9.3.1",
-    "sass": "^1.57.1"
+    "sass": "^1.58.1"
   }
 }

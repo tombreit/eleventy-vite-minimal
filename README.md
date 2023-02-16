@@ -1,25 +1,23 @@
 # eleventy-vite-minimal
 
-## Notes
+*Demo for https://github.com/11ty/eleventy-plugin-vite/issues/26*
 
-* Current (2023-01-20) combination of `@11ty/eleventy": "^2.0.0-beta.1` and `@11ty/eleventy-plugin-vite": "^2.0.0-canary.2` will throw a warning:
+*The PDF file in `downloads/` does not end up in `_site/downloads` for production builds.*
 
-  > [11ty] Warning: Eleventy Plugin (@11ty/eleventy-plugin-vite) Compatibility: This project requires the Eleventy version to match '>=2.0.0-canary.4' but found 2.0.0-beta.1. Use `npm update @11ty/eleventy -g` to upgrade the eleventy global or `npm update @11ty/eleventy --save` to upgrade your local project version.
-
-
-## Run
+## Actual result
 
 ```bash
-npm install
+npx eleventy
+```
+
+* ✅ `index.html` should have `color: red` and console should print `Hi`
+* ❌ `myfile.pdf` in `_site/downloads/` and referenced in `_site/index.html`
+
+## Expected result
+
+```bash
 npx eleventy --serve
 ```
 
-## Result
-
-```bash
-/index.md        -> _site/index.html
-/assets/app.js   -> _site/assets/app.js
-/assets/app.scss -> _site/assets/app.css
-```
-
-`index.html` should have `color: red` and console should print `Hi`
+* ✅ `index.html` should have `color: red` and console should print `Hi`
+* ✅ `myfile.pdf` in `_site/downloads/` and referenced in `_site/index.html`
